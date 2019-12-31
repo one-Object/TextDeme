@@ -1,27 +1,49 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import {HashRouter as Router, Switch, Route} from 'react-router-dom';
-import 'antd/dist/antd.css';
-import * as echarts from 'echarts';
-import { message, Button, DatePicker } from 'antd';
-import FormConent from '../pref/index.jsx'
+import React, { Component } from 'react'
+import { Tabs, Button } from 'antd';
+import EditTable from './editTable/index.jsx'
+import PersonModal from './personModal.jsx'
+import HotTableDemo from './hotTable.jsx'
+import './style.less'
+import SearchResult from './searchResult.jsx'
 
-export default class Home extends Component {
+const TabPane = Tabs.TabPane;
+
+class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            addPerson: [],
+        }
+    }
+    
+    onChangeTabs = (key) => {
 
-         }
+    }
+
+    showModal = () => {
+        debugger;
+        PersonModal.show()
+
     }
 
     componentDidMount() {
+        
     }
+    
+    render() {
+        return (
+            <div className="homeStyle">
+                <Button onClick={this.showModal}>点我</Button>
 
-    render() { 
-        return ( 
-            <div>
-              <FormConent />
+                <Tabs defaultActiveKey="3" onChange={this.onChangeTabs}>
+                    <TabPane tab="可编辑表格" key="1"><EditTable/></TabPane>
+                    <TabPane tab="handsontable" key="2"><HotTableDemo /></TabPane>
+                    <TabPane tab="题目三" key="3"><SearchResult/></TabPane>
+                </Tabs>
+                <PersonModal/>
             </div>
-         );
+        )
     }
 }
+
+export default Home

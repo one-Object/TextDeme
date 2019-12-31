@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { message, Button, DatePicker } from 'antd';
-// import 'antd/dist/antd.css';
 import * as echarts from 'echarts';
-import LogIndex from '../component/pref/log/log.jsx'
 
 export default class EchartsWord extends Component {
     constructor(props) {
@@ -31,17 +29,17 @@ export default class EchartsWord extends Component {
     }
     componentDidMount() {
         this.echartsList()
+        console.log("Echarts")
     }
 
     add() {
-        message.info("请不要用脚趾")
+        message.warning("请不要用脚趾")
     }
     render() { 
         return ( 
             <div>
                 <Button type="primary" onClick={this.add.bind(this)}>哈哈</Button>
                 <div id="main" style={{ width: 400, height: 400 }}></div>
-                <LogIndex/>
             </div>
          );
     }
