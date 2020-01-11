@@ -27,7 +27,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        
+        const { flag } = this.state;
     }
     
     render() {
@@ -39,6 +39,7 @@ class Home extends Component {
                     <TabPane tab="handsontable" key="2"><HotTableDemo /></TabPane>
                     <TabPane tab="哈哈" key="3"><SearchResult/></TabPane>
                     <TabPane tab="增加" key="4"><SearchResult/></TabPane>
+                    <TabPane tab="我是测试git" key="5"><SearchResult/></TabPane>
                 </Tabs>
                 <PersonModal/>
             </div>
