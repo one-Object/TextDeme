@@ -18,7 +18,7 @@ class SearchResult extends Component {
     }
 
     componentDidMount() {
-
+        let { value } = this.state;
     }
 
     onChange = (e) => {
