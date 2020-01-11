@@ -28,6 +28,7 @@ class Home extends Component {
 
     componentDidMount() {
         const { flag } = this.state;
+        let cacheData = {}
     }
     
     render() {
