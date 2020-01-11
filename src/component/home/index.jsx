@@ -38,6 +38,7 @@ class Home extends Component {
                     <TabPane tab="可编辑表格" key="1"><EditTable/></TabPane>
                     <TabPane tab="handsontable" key="2"><HotTableDemo /></TabPane>
                     <TabPane tab="哈哈" key="3"><SearchResult/></TabPane>
+                    <TabPane tab="增加" key="4"><SearchResult/></TabPane>
                 </Tabs>
                 <PersonModal/>
             </div>
