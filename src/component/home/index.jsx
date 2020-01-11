@@ -34,7 +34,6 @@ class Home extends Component {
         return (
             <div className="homeStyle">
                 <Button onClick={this.showModal}>点我</Button>
-
                 <Tabs defaultActiveKey="3" onChange={this.onChangeTabs}>
                     <TabPane tab="可编辑表格" key="1"><EditTable/></TabPane>
                     <TabPane tab="handsontable" key="2"><HotTableDemo /></TabPane>
