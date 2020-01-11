@@ -38,7 +38,8 @@ class Home extends Component {
                 <Tabs defaultActiveKey="3" onChange={this.onChangeTabs}>
                     <TabPane tab="可编辑表格" key="1"><EditTable/></TabPane>
                     <TabPane tab="handsontable" key="2"><HotTableDemo /></TabPane>
-                    <TabPane tab="表格" key="3"><SearchResult/></TabPane>
+                    <TabPane tab="哈哈" key="3"><SearchResult/></TabPane>
+                    <TabPane tab="第四个tab" key="4"><SearchResult/></TabPane>
                 </Tabs>
                 <PersonModal/>
             </div>
