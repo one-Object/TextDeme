@@ -19,7 +19,6 @@ export default class MyRouter extends Component {
                         <Switch>
                             <Route path="/home" exact component={Home}></Route>
                             <Route path="/echartsWord" strict component={EchartsWord}></Route>
-                            {/*重定向*/}
                             <Redirect to="/home"></Redirect>
                         </Switch>
                     </div>
