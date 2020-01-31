@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Table, Input, Button } from 'antd';
 import './style.less';
-import _ from 'lodash'
 
 let that = null;
 
@@ -40,8 +39,6 @@ class EditTable extends Component {
             rowKey: [],
         }
         that = this;
-        this.mapObj = {};
-        this.srcDOM = {};
     }
 
     inputBlur = (record, index, filed, e) => {
@@ -54,57 +51,16 @@ class EditTable extends Component {
 
     editHandle = () => {
         this.setState({ isEdit: true })
-        this.srcDOM = {
-            f1: '我修改了',
-            f2: '222',
-            f3: '333',
-            f4: '444',
-            f5: '555',
-            f6: {
-                f1: '111',
-                f2: '222',
-                f3: '333',
-                f4: {
-                    f1: '111',
-                    f2: '222',
-                    f3: '333',
-                }
-            }
-        }
-        console.log('改变的', this.srcDOM);
-        console.log(this.mapObj);
     }
 
     saveHandle = () => {
         this.setState({ isEdit: false })
-        this.srcDOM = {
-            f1: '111',
-            f2: '222',
-            f3: '333',
-            f4: '444',
-            f5: '555',
-            f6: {
-                f1: '111',
-                f2: '222',
-                f3: '333',
-                f4: {
-                    f1: '111',
-                    f2: '222',
-                    f3: '333',
-                }
-            }
-        }
-        console.log(Object.keys(this.srcDOM))
-        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-        this.mapObj = _.merge({}, this.srcDOM)  // 深复制
-        console.log(this.srcDOM);
-        console.log(this.mapObj);
     }
 
     onAddClick = (index) => {
-        console.log(index)
         const { dataSource } = this.state
         dataSource.splice(index + 1, 0, {
+            key: dataSource.length + 1,
             name: '',
             age: '',
             profession: '',
