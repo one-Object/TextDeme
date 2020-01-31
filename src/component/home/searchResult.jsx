@@ -7,6 +7,8 @@ import axios from 'axios';
 let that = null;
 
 class SearchResult extends Component {
+    static defineBox(params) {}
+
     constructor(props) {
         super(props);
         this.state = {

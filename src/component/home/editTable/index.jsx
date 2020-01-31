@@ -60,7 +60,7 @@ class EditTable extends Component {
             f3: '333',
             f4: '444',
             f5: '555',
-            f5: {
+            f6: {
                 f1: '111',
                 f2: '222',
                 f3: '333',
@@ -83,7 +83,7 @@ class EditTable extends Component {
             f3: '333',
             f4: '444',
             f5: '555',
-            f5: {
+            f6: {
                 f1: '111',
                 f2: '222',
                 f3: '333',
