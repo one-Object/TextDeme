@@ -1,5 +1,5 @@
 //人员列表：类型数组，操作行为：初始化，添加,删除
-export  var personList=(state=[],action)=>{
+export const personList = (state = [], action)=>{
     switch (action.type) {
         case "INITIAL_PERSON_LIST":
             return action.payload;

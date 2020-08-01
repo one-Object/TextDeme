@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux';
 
 //导入action creator
-import {initPersonList,deletePersonList} from '../../redux/action';
+import { initPersonList, deletePersonList } from '../../store/action';
 
 class PersonTable extends Component {
     componentWillMount(){
@@ -55,7 +55,7 @@ const mapDispatchToProps=(dispatch,parentProps)=>({
     },
     edit:(index)=>{
         //1.让对话框显示
-        parentProps.show();
+        // parentProps.show();
         //2.要设置下标，让修改的对话框知道修改数组中的哪一项
         parentProps.setNowIndex(index);
 

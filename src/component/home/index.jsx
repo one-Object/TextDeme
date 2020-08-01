@@ -5,6 +5,8 @@ import PersonModal from './personModal.jsx'
 import HotTableDemo from './hotTable.jsx'
 import './style.less'
 import SearchResult from './searchResult.jsx'
+import HookComponent from '../hookComponent'
+import PersonTable from './personTable'
 
 const TabPane = Tabs.TabPane;
 
@@ -36,8 +38,10 @@ class Home extends Component {
                     <TabPane tab="可编辑表格" key="1"><EditTable/></TabPane>
                     <TabPane tab="handsontable" key="2"><HotTableDemo /></TabPane>
                     <TabPane tab="搜索" key="3"><SearchResult/></TabPane>
+                    <TabPane tab="redux" key="4"><PersonTable/></TabPane>
                 </Tabs>
-                <PersonModal/>
+                <HookComponent />
+                <PersonModal />
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { addPersonList } from '../../redux/action';
+import { addPersonList } from '../../store/action';
 import { connect } from 'react-redux';
 import { Button } from 'antd';
 import { HotTable } from '@handsontable/react';
